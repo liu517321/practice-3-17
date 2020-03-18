@@ -1,0 +1,19 @@
+import java.util.*;
+
+public class Replacement {
+    public String replaceSpace(String iniString, int length) {
+        // write code here
+         if(iniString ==null || iniString.length()==0){
+            return  iniString;
+        }
+        StringBuilder str=new StringBuilder();
+        for (int i=0;i<length;i++){
+            char t =iniString.charAt(i); //用stringbuffer 重新拼接一个新得字符串
+            if(t ==' ')
+                str.append("%20");
+            else str.append(t);
+
+        }
+        return str.toString();
+    }
+}
